@@ -1,0 +1,11 @@
+@media ( max-width: 600px ) {
+
+	.wp-block-post-template {
+		grid-template-columns: 1fr;
+	}
+
+	.wp-block-post-featured-image img {
+		filter: brightness( 0.5 );
+		transition: none;
+	}
+}

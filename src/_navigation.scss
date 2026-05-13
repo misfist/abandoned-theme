@@ -1,0 +1,15 @@
+.wp-block-navigation {
+	font-size: 0.78rem;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+
+	a {
+		color: var( --wp--preset--color--contrast-3 );
+		text-decoration: none;
+		transition: color 0.4s ease;
+
+		&:hover {
+			color: var( --wp--preset--color--contrast-2 );
+		}
+	}
+}
