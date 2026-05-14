@@ -31,6 +31,7 @@
 } -->
 <div class="wp-block-query alignwide">
     <!-- wp:post-template {"layout":{"type":"grid","columnCount":3}} -->
+     
         <!-- wp:post-featured-image {"isLink":true,"aspectRatio":"3/2"} /-->
 
         <!-- wp:group {"metadata":{"name":"Post Body"},"className":"wp-block-post-body","layout":{"type":"default"}} -->
