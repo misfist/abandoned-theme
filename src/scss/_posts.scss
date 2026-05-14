@@ -1,22 +1,19 @@
-// Remove WP's body background-image; we handle opacity at the content level.
-body {
-	background-image: none;
-}
-
-// Ghost background behind the main content area.
-main {
+.main-content {
 	position: relative;
 
 	&::before {
 		content: '';
-		position: absolute;
+		position: fixed;
 		inset: 0;
-		background-image: var( --as-background-image );
-		background-size: cover;
-		background-position: center;
-		opacity: 0.08;
+		background-color: var( --wp--preset--color--base );
+		opacity: 0.80;
 		z-index: 0;
 		pointer-events: none;
+	}
+
+	> * {
+		position: relative;
+		z-index: 1;
 	}
 }
 
@@ -45,7 +42,7 @@ main {
 	padding: 8px 4px 3px;
 	font-size: var( --wp--preset--font-size--x-large );
 	font-weight: 300;
-	color: var( --wp--preset--color--contrast-2 );
+	// color: var( --wp--preset--color--contrast-2 );
 	letter-spacing: 0.06em;
 	transition: color 0.6s ease;
 	text-transform: uppercase;
@@ -59,10 +56,10 @@ main {
 .wp-block-post-date,
 .wp-block-post-terms,
 .wp-block-post-author-name {
-	padding: 0 4px 16px;
+	// padding: 0 4px 16px;
 	font-size: var( --wp--preset--font-size--x-small );
 	font-weight: 300;
-	color: var( --wp--preset--color--primary );
+	// color: var( --wp--preset--color--primary );
 	letter-spacing: 0.16em;
 	text-transform: uppercase;
 	transition: color 0.6s ease;
@@ -108,13 +105,8 @@ main {
 				}
 			}
 
-			.wp-block-post-title {
+			a {
 				color: var( --wp--preset--color--contrast );
-			}
-
-			.wp-block-post-date,
-			.wp-block-post-terms {
-				color: var( --wp--preset--color--contrast-3 );
 			}
 		}
 
