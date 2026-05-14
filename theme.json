@@ -187,12 +187,13 @@
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--normal)",
 					"letterSpacing": "0.13rem",
-					"textTransform": "uppercase"
+					"textTransform": "uppercase",
+					"fontStyle": "italic"
 				}
 			},
 			"core/site-title": {
 				"color": {
-					"text": "var(--wp--preset--color--contrast-2)"
+					"text": "var(--wp--preset--color--accent)"
 				},
 				"typography": {
 					"fontWeight": "300",
