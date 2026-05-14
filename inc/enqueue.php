@@ -66,3 +66,25 @@ function enqueue_editor_assets(): void {
 	);
 }
 add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\enqueue_editor_assets' );
+
+/**
+ * Enqueue script modules for the frontend.
+ *
+ * Only enqueued on listing pages where the lightbox is rendered.
+ *
+ * @return void
+ */
+function enqueue_script_modules(): void {
+	if ( ! is_home() && ! is_archive() && ! is_search() ) {
+		return;
+	}
+
+	wp_register_script_module(
+		'abandonedstroller/lightbox',
+		get_stylesheet_directory_uri() . '/build/js/lightbox.js',
+		array( '@wordpress/interactivity' )
+	);
+
+	wp_enqueue_script_module( 'abandonedstroller/lightbox' );
+}
+add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\enqueue_script_modules' );

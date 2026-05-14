@@ -5,8 +5,8 @@ const ImageMinimizerPlugin = require( 'image-minimizer-webpack-plugin' );
 module.exports = {
 	...defaultConfig,
 	entry: {
-		index: './src/index.js',
-		editor: './src/editor.js',
+		index:  [ './src/index.js', './src/index.scss' ],
+		editor: [ './src/editor.js', './src/editor.scss' ],
 	},
 	plugins: [
 		...defaultConfig.plugins,
@@ -16,6 +16,10 @@ module.exports = {
 					from: 'src/images',
 					to: 'images',
 					noErrorOnMissing: true,
+				},
+				{
+					from: 'src/js/lightbox.js',
+					to: 'js/lightbox.js',
 				},
 			],
 		} ),
