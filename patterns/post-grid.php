@@ -4,6 +4,7 @@
  * Slug: abandonedstroller/post-grid
  * Categories: Posts
  * Blocks: core/query
+ * Inserter: true
  */
 ?>
 <!-- wp:query {
